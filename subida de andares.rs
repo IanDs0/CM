@@ -1,22 +1,21 @@
 use std::io;
 
-fn possibilidade(mut andares: i32) -> f64{
+fn possibilidade(mut andares: i32) -> i32{
 
-    let mut possibilidades = 0.0;
+    let mut possibilidades = 0;
 
     if andares <= 3 {
         
         match andares {
-            3 => possibilidades = 4.0,
-            2 => possibilidades = 2.0,
-            1 => possibilidades = 1.0,
+            3 => possibilidades = 6,
+            2 => possibilidades = 3,
+            1 => possibilidades = 10,
             _ => println!("numeor  invalido")
         }
         
     }else{
         andares -= 3;
-        possibilidades = f64::powi(4.0, andares);
-        possibilidades *= 4.0;
+        possibilidades = 6 + (andares*3);
     }
     
     possibilidades
