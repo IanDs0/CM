@@ -9,7 +9,7 @@ fn possibilidade(mut andares: i32) -> i32{
         match andares {
             3 => possibilidades = 6,
             2 => possibilidades = 3,
-            1 => possibilidades = 10,
+            1 => possibilidades = 1,
             _ => println!("numeor  invalido")
         }
         
